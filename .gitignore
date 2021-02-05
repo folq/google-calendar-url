@@ -1,0 +1,14 @@
+# Distribution
+build/
+
+# elm-package generated files
+elm-stuff
+
+# elm-repl generated files
+repl-temp-*
+
+# Dependency directories
+node_modules
+
+# Files generated with elm-verify-examples
+tests/VerifyExamples
