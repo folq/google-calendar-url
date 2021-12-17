@@ -3,7 +3,7 @@
     "name": "folq/google-calendar-url",
     "summary": "Build URLs for creating events in Google Calendar with prefilled contents",
     "license": "BSD-3-Clause",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "exposed-modules": [
         "GoogleCalendar"
     ],
