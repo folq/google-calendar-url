@@ -20,18 +20,21 @@ import Url.Builder
     import Url
     import GoogleCalendar exposing (Duration(..))
 
-    Url.toString <| eventEditUrl Time.utc { title = "Some event", duration = NoDurationLetUserChoose, details = "Details about the event.\n\nMight contain newlines." }
+    Url.toString <| eventEditUrl Time.utc { title = "Some event", duration = NoDurationLetUserChoose, details = "Details about the event.\n\nMight contain newlines.", guests = [] }
     --> "https://calendar.google.com/calendar/u/0/r/eventedit?text=Some%20event&details=Details%20about%20the%20event.%0A%0AMight%20contain%20newlines."
 
-    Url.toString <| eventEditUrl Time.utc { title = "Some event", duration = TimeSpan { from = Time.millisToPosix 1612508680856, to = Time.millisToPosix 1612508680856 }, details = "Details about the event.\n\nMight contain newlines." }
+    Url.toString <| eventEditUrl Time.utc { title = "Some event", duration = TimeSpan { from = Time.millisToPosix 1612508680856, to = Time.millisToPosix 1612508680856 }, details = "Details about the event.\n\nMight contain newlines.", guests = [] }
     --> "https://calendar.google.com/calendar/u/0/r/eventedit?text=Some%20event&details=Details%20about%20the%20event.%0A%0AMight%20contain%20newlines.&dates=20210205T070440%2F20210205T070440"
 
-    Url.toString <| eventEditUrl Time.utc { title = "Some all-day event", duration = CustomDates "20210405/20210406", details = "Details about the event.\n\nMight contain newlines." }
+    Url.toString <| eventEditUrl Time.utc { title = "Some all-day event", duration = CustomDates "20210405/20210406", details = "Details about the event.\n\nMight contain newlines.", guests = [] }
     --> "https://calendar.google.com/calendar/u/0/r/eventedit?text=Some%20all-day%20event&details=Details%20about%20the%20event.%0A%0AMight%20contain%20newlines.&dates=20210405%2F20210406"
+
+    Url.toString <| eventEditUrl Time.utc { title = "Some event with guests", duration = NoDurationLetUserChoose, details = "Details about the event.\n\nMight contain newlines.", guests = ["hello@example.com", "hi@example.com"] }
+    --> "https://calendar.google.com/calendar/u/0/r/eventedit?text=Some%20event%20with%20guests&details=Details%20about%20the%20event.%0A%0AMight%20contain%20newlines.&add=hello%40example.com,hi%40example.com"
 
 -}
 eventEditUrl : Time.Zone -> EventDetails -> Url
-eventEditUrl zone { title, duration, details } =
+eventEditUrl zone { title, duration, details, guests } =
     let
         formatTime time =
             let
@@ -62,6 +65,14 @@ eventEditUrl zone { title, duration, details } =
 
                 CustomDates string ->
                     Just string
+
+        guestsIfAny =
+            case guests of
+                [] ->
+                    Nothing
+
+                _ ->
+                    Just <| String.join "," guests
     in
     { host = "calendar.google.com"
     , path = "/calendar/u/0/r/eventedit"
@@ -75,6 +86,7 @@ eventEditUrl zone { title, duration, details } =
                         [ Just <| queryValue "text" title
                         , Just <| queryValue "details" details
                         , Maybe.map (queryValue "dates") dates
+                        , Maybe.map (queryValue "add") guestsIfAny
                         ]
     , fragment = Nothing
     }
@@ -87,6 +99,7 @@ type alias EventDetails =
     { title : String
     , duration : Duration
     , details : String
+    , guests : List String
     }
 
 
