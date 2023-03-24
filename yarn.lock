@@ -325,10 +325,10 @@ commander@^7.1.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-commander@^9.3.0:
-  version "9.4.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.1.tgz#d1dd8f2ce6faf93147295c0df13c7c21141cfbdd"
-  integrity sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==
+commander@^9.4.1:
+  version "9.5.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.5.0.tgz#bc08d1eb5cedf7ccb797a96199d41c7bc3e60d30"
+  integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -471,21 +471,21 @@ elm-format@^0.8.5:
   dependencies:
     binwrap "^0.2.3"
 
-elm-solve-deps-wasm@^1.0.1:
+elm-solve-deps-wasm@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/elm-solve-deps-wasm/-/elm-solve-deps-wasm-1.0.2.tgz#cabd3cadf344295944b8d046a857b6ee05e12aaf"
   integrity sha512-qnwo7RO9IO7jd9SLHvIy0rSOEIlc/tNMTE9Cras0kl+b161PVidW4FvXo0MtXU8GAKi/2s/HYvhcnpR/NNQ1zw==
 
-elm-test@^0.19.1-revision10:
-  version "0.19.1-revision10"
-  resolved "https://registry.yarnpkg.com/elm-test/-/elm-test-0.19.1-revision10.tgz#d4da0d51d305ea9bdded53f3a296ee1a2f56a86e"
-  integrity sha512-33jXpA15alVcYjX+UJOkiOmQIQxjd3c0eeg3960VyhEf8tG8O4g4B5ipMmu6KAllncrSxSQrYzKJnNJM/8ZiCg==
+elm-test@^0.19.1-revision12:
+  version "0.19.1-revision12"
+  resolved "https://registry.yarnpkg.com/elm-test/-/elm-test-0.19.1-revision12.tgz#8932cf58b388cff8d23c7cf2b80adc66249aa797"
+  integrity sha512-5GV3WkJ8R/faOP1hwElQdNuCt8tKx2+1lsMrdeIYWSFz01Kp9gJl/R6zGtp4QUyrUtO8KnHsxjHrQNUf2CHkrg==
   dependencies:
     chalk "^4.1.2"
     chokidar "^3.5.3"
-    commander "^9.3.0"
+    commander "^9.4.1"
     cross-spawn "^7.0.3"
-    elm-solve-deps-wasm "^1.0.1"
+    elm-solve-deps-wasm "^1.0.2"
     glob "^8.0.3"
     graceful-fs "^4.2.10"
     split "^1.0.1"
