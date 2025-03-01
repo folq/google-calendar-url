@@ -10,7 +10,7 @@
     "elm": "^0.19.1-6",
     "elm-doc-preview": "^5.0.5",
     "elm-format": "^0.8.7",
-    "elm-test": "^0.19.1-revision12"
+    "elm-test": "^0.19.1-revision15"
   },
   "devDependencies": {
     "elm-verify-examples": "^5.3.0"
