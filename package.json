@@ -13,6 +13,6 @@
     "elm-test": "^0.19.1-revision15"
   },
   "devDependencies": {
-    "elm-verify-examples": "^5.3.0"
+    "elm-verify-examples": "^6.0.3"
   }
 }
