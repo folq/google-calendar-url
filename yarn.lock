@@ -421,10 +421,10 @@ elm-format@^0.8.8:
   resolved "https://registry.yarnpkg.com/elm-solve-deps-wasm/-/elm-solve-deps-wasm-2.0.0.tgz#8214705876fbcd9789cf6ab2db45ec781b5c1234"
   integrity sha512-11OV8FgB9qsth/F94q2SJjb1MoEgbworSyNM1L+YlxVoaxp7wtWPyA8cNcPEkSoIKG1B8Tqg68ED1P6dVamHSg==
 
-elm-test@^0.19.1-revision16:
-  version "0.19.1-revision16"
-  resolved "https://registry.yarnpkg.com/elm-test/-/elm-test-0.19.1-revision16.tgz#8e64ffe7abc47df765029870415b42b338447335"
-  integrity sha512-t4SCY3Vq2KUuUX9LpqmITroutY/l5hjLeQ8Hpc1bUdzqzTifxVs76omjfdHHZJGUCLPVUN0VktCNsNr36IUcaw==
+elm-test@^0.19.1-revision17:
+  version "0.19.1-revision17"
+  resolved "https://registry.yarnpkg.com/elm-test/-/elm-test-0.19.1-revision17.tgz#c659865ac0604971566fadfadd9bdb52245f7dfe"
+  integrity sha512-P9J8tXdLXmqgIMlSozfcb/KCORq4GuxfwBbzqFLMss8KlGmUKonOJwseRX6xVkdU5xgGVA/mz9rfMTNomIbwng==
   dependencies:
     chalk "^4.1.2"
     chokidar "^3.5.3"
